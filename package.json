@@ -1,0 +1,13 @@
+{
+  "name": "shut-up-logo",
+  "version": "1.0.0",
+  "description": "Dark gothic t-shirt logo generator",
+  "main": "generate-logo.js",
+  "type": "module",
+  "scripts": {
+    "generate": "node generate-logo.js"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2"
+  }
+}
