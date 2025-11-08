@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Grunge texture pattern -->
+    <filter id="grunge">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <!-- Rough edges filter -->
+    <filter id="roughen">
+      <feTurbulence baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3"/>
+    </filter>
+    
+    <!-- Shadow effect -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="4" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background (transparent for t-shirt) -->
+  <rect width="800" height="800" fill="transparent"/>
+  
+  <!-- Decorative skull elements (subtle, in background) -->
+  <g opacity="0.15" fill="#ffffff">
+    <!-- Left skull -->
+    <ellipse cx="150" cy="400" rx="40" ry="50"/>
+    <ellipse cx="135" cy="385" rx="12" ry="15" fill="#000000"/>
+    <ellipse cx="165" cy="385" rx="12" ry="15" fill="#000000"/>
+    <path d="M 140 410 Q 150 420 160 410" stroke="#000000" stroke-width="3" fill="none"/>
+    
+    <!-- Right skull -->
+    <ellipse cx="650" cy="400" rx="40" ry="50"/>
+    <ellipse cx="635" cy="385" rx="12" ry="15" fill="#000000"/>
+    <ellipse cx="665" cy="385" rx="12" ry="15" fill="#000000"/>
+    <path d="M 640 410 Q 650 420 660 410" stroke="#000000" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Flame elements (subtle, decorative) -->
+  <g opacity="0.2" fill="#ffffff" filter="url(#roughen)">
+    <!-- Left flames -->
+    <path d="M 100 500 Q 90 450 100 400 Q 95 420 100 440 Q 105 460 100 500 Z"/>
+    <path d="M 120 520 Q 115 480 120 440 Q 118 460 120 480 Q 122 500 120 520 Z"/>
+    
+    <!-- Right flames -->
+    <path d="M 700 500 Q 710 450 700 400 Q 705 420 700 440 Q 695 460 700 500 Z"/>
+    <path d="M 680 520 Q 685 480 680 440 Q 682 460 680 480 Q 678 500 680 520 Z"/>
+  </g>
+  
+  <!-- Distressed background circle -->
+  <circle cx="400" cy="400" r="280" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" filter="url(#grunge)"/>
+  
+  <!-- Main text: SHUT UP -->
+  <g filter="url(#shadow)">
+    <!-- SHUT -->
+    <text x="400" y="350" 
+          font-family="Impact, Arial Black, sans-serif" 
+          font-size="140" 
+          font-weight="900" 
+          fill="#ffffff" 
+          text-anchor="middle"
+          letter-spacing="8"
+          style="paint-order: stroke; stroke: #000000; stroke-width: 8px;">
+      SHUT
+    </text>
+    
+    <!-- UP -->
+    <text x="400" y="480" 
+          font-family="Impact, Arial Black, sans-serif" 
+          font-size="140" 
+          font-weight="900" 
+          fill="#ffffff" 
+          text-anchor="middle"
+          letter-spacing="8"
+          style="paint-order: stroke; stroke: #000000; stroke-width: 8px;">
+      UP
+    </text>
+  </g>
+  
+  <!-- Grunge texture overlay on text -->
+  <g filter="url(#grunge)" opacity="0.3">
+    <text x="400" y="350" 
+          font-family="Impact, Arial Black, sans-serif" 
+          font-size="140" 
+          font-weight="900" 
+          fill="#000000" 
+          text-anchor="middle"
+          letter-spacing="8">
+      SHUT
+    </text>
+    <text x="400" y="480" 
+          font-family="Impact, Arial Black, sans-serif" 
+          font-size="140" 
+          font-weight="900" 
+          fill="#000000" 
+          text-anchor="middle"
+          letter-spacing="8">
+      UP
+    </text>
+  </g>
+  
+  <!-- Decorative lines (distressed) -->
+  <line x1="200" y1="520" x2="600" y2="520" stroke="#ffffff" stroke-width="3" opacity="0.4" filter="url(#roughen)"/>
+  <line x1="200" y1="280" x2="600" y2="280" stroke="#ffffff" stroke-width="3" opacity="0.4" filter="url(#roughen)"/>
+  
+  <!-- Corner accent marks -->
+  <g stroke="#ffffff" stroke-width="4" fill="none" opacity="0.5">
+    <path d="M 180 250 L 180 230 L 200 230"/>
+    <path d="M 620 250 L 620 230 L 600 230"/>
+    <path d="M 180 550 L 180 570 L 200 570"/>
+    <path d="M 620 550 L 620 570 L 600 570"/>
+  </g>
+</svg>

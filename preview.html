@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shut Up - T-Shirt Logo Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .preview-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .preview-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .preview-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.2em;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .black-bg {
+            background: #000000;
+        }
+        
+        .dark-bg {
+            background: #1a1a1a;
+        }
+        
+        .tshirt-mockup {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tshirt-mockup h2 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+        }
+        
+        .tshirt {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+            background: #000000;
+            border-radius: 20px 20px 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        .tshirt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 40px;
+            background: #000000;
+            border-radius: 0 0 60px 60px;
+        }
+        
+        .tshirt img {
+            width: 70%;
+            height: auto;
+            z-index: 1;
+        }
+        
+        .info {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            color: #ffffff;
+        }
+        
+        .info h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-size: 1.3em;
+        }
+        
+        .info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .info li:last-child {
+            border-bottom: none;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .download-btn:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .tshirt {
+                width: 300px;
+                height: 375px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Shut Up - T-Shirt Logo 🔥</h1>
+        
+        <div class="preview-grid">
+            <div class="preview-card black-bg">
+                <h2 style="color: #ffffff;">On Black Background</h2>
+                <div class="logo-container">
+                    <img src="shut-up-logo.svg" alt="Shut Up Logo on Black">
+                </div>
+            </div>
+            
+            <div class="preview-card dark-bg">
+                <h2 style="color: #ffffff;">On Dark Gray Background</h2>
+                <div class="logo-container">
+                    <img src="shut-up-logo.svg" alt="Shut Up Logo on Dark Gray">
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <h2>On White Background</h2>
+                <div class="logo-container">
+                    <img src="shut-up-logo.svg" alt="Shut Up Logo on White">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tshirt-mockup">
+            <h2>T-Shirt Mockup</h2>
+            <div class="tshirt">
+                <img src="shut-up-logo.svg" alt="Shut Up Logo on T-Shirt">
+            </div>
+        </div>
+        
+        <div class="info">
+            <h3>📋 Design Specifications</h3>
+            <ul>
+                <li><strong>Style:</strong> Gothic/Grunge with distressed effects</li>
+                <li><strong>Colors:</strong> Black and White (high contrast)</li>
+                <li><strong>Elements:</strong> Subtle skull silhouettes and flame accents</li>
+                <li><strong>Typography:</strong> Bold, impactful gothic-style lettering</li>
+                <li><strong>Format:</strong> SVG (scalable vector - perfect for printing)</li>
+                <li><strong>Dimensions:</strong> 800x800px (easily scalable)</li>
+                <li><strong>Vibe:</strong> Powerful, intimidating, edgy</li>
+            </ul>
+            
+            <h3 style="margin-top: 25px;">🎨 Design Features</h3>
+            <ul>
+                <li>Heavy stroke outlines for bold presence</li>
+                <li>Grunge texture filters for worn, distressed look</li>
+                <li>Subtle skull elements in background (15% opacity)</li>
+                <li>Flame accents on sides for intensity</li>
+                <li>Drop shadow for depth and dimension</li>
+                <li>Decorative corner brackets and lines</li>
+                <li>Wide letter spacing for impact</li>
+            </ul>
+            
+            <div style="text-align: center;">
+                <a href="shut-up-logo.svg" download class="download-btn">⬇ Download SVG Logo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
